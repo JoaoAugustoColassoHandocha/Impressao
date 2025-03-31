@@ -1,3 +1,5 @@
+#Aplicativo para impressão de arquivos em impressoras de rede
+
 import os
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
@@ -51,8 +53,8 @@ def imprimir():
     os.system('pause')
     os.system('cls')
 
-    print('\n1 - Impressora Norte')
-    print('2 - Impressora Sul\n')
+    print('\n1 - Impressora Teste1')
+    print('2 - Impressora Teste2\n')
 
     imp = int(input('Selecione a impressora: '))
 
@@ -60,13 +62,13 @@ def imprimir():
 
     if imp == 1:
         
-        os.system('print /d:"\\\curfpfs01\RICOH_Lado_Norte" "{}"'.format(filename))
+        os.system('print /d:"\\\Servidor_Teste\Teste1" "{}"'.format(filename))
         os.system('pause')
         main()
 
     elif imp == 2:
         
-        os.system('print /d:"\\\curfpfs01\RICOH_Lado_Sul" "{}"'.format(filename))
+        os.system('print /d:"\\\Servidor_Teste\Teste2" "{}"'.format(filename))
         os.system('pause')
         main()
         
